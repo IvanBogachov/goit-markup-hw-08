@@ -47,9 +47,23 @@ ul {
 }
 
 .portfolio__wrap, .footer__wrap, .customers__wrap, .team__wrap, .works__wrap, .features__wrap, .hero__wrap, .header__wrap {
-  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .portfolio__wrap, .footer__wrap, .customers__wrap, .team__wrap, .works__wrap, .features__wrap, .hero__wrap, .header__wrap {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__wrap, .footer__wrap, .customers__wrap, .team__wrap, .works__wrap, .features__wrap, .hero__wrap, .header__wrap {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__wrap, .footer__wrap, .customers__wrap, .team__wrap, .works__wrap, .features__wrap, .hero__wrap, .header__wrap {
+    width: 1200px;
+  }
 }
 
 .contacts__link, .nav, .footer__wrap, .header__wrap {
