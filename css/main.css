@@ -258,7 +258,7 @@ body {
 }
 
 .menu-backdrop__icon-menu {
-  fill: #000000;
+  fill: var(--primary-text-color);
   -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
   transition: fill var(--time-transl) var(--cubic-bezier);
   cursor: pointer;
@@ -280,7 +280,10 @@ body {
 
 .menu-backdrop__icon-cross {
   display: none;
-  fill: #000000;
+  fill: var(--primary-text-color);
+  -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+  cursor: pointer;
 }
 .menu-backdrop__icon-cross:hover, .menu-backdrop__icon-cross:focus {
   fill: var(--accent-color);
@@ -749,8 +752,8 @@ body {
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
-  -webkit-transition: color 250ms var(--cubic-bezier);
-  transition: color 250ms var(--cubic-bezier);
+  -webkit-transition: color var(--time-transl) var(--cubic-bezier);
+  transition: color var(--time-transl) var(--cubic-bezier);
 }
 
 @media screen and (max-width: 767px) {
@@ -764,7 +767,7 @@ body {
   fill: currentColor;
   margin-right: 10px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 767px) {
   .contacts__icon {
     display: block;
   }

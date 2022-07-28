@@ -75,7 +75,7 @@
   }
 }
 .menu-backdrop__icon-menu {
-  fill: #000000;
+  fill: var(--primary-text-color);
   transition: fill var(--time-transl) var(--cubic-bezier);
   cursor: pointer;
 
@@ -99,7 +99,9 @@
 .menu-backdrop__icon-cross {
   display: none;
 
-  fill: #000000;
+  fill: var(--primary-text-color);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+  cursor: pointer;
 
   &:hover,
   &:focus {

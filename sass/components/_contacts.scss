@@ -76,7 +76,7 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
-    transition: color 250ms var(--cubic-bezier);
+    transition: color var(--time-transl) var(--cubic-bezier);
   }
 }
 
@@ -91,7 +91,7 @@
   fill: currentColor;
   margin-right: 10px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 767px) {
     & {
       display: block;
     }
