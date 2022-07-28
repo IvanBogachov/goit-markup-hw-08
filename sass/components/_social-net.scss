@@ -1,9 +1,9 @@
 .social-net {
   @extend %list;
+
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-bottom: 30px;
 }
 
 .social-net__item:not(:last-child) {
@@ -19,16 +19,16 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: background-color var(--time-transl) var(--cubic-bezier);
+  transition: background-color 250ms var(--cubic-bezier);
 
-&:hover,
-&:focus {
-  background-color: var(--accent-color);
-}
-&:hover .social-net__icon,
-&:focus .social-net__icon {
-  fill: var(--primary-color);
-}
+  &:hover,
+  &:active {
+    background-color: var(--accent-color);
+  }
+  &:hover .social-net__icon,
+  &:active .social-net__icon {
+    fill: var(--primary-color);
+  }
 }
 
 .social-net__link--footer {
@@ -37,7 +37,7 @@
 
 .social-net__icon {
   fill: var(--social-net-color);
-  transition: fill var(--time-transl) var(--cubic-bezier);
+  transition: fill 250ms var(--cubic-bezier);
 }
 
 .social-net__icon--footer {

@@ -1,25 +1,11 @@
 %section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-%container {
-  // width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-  @media screen and (min-width: 480px) {
-    & {
-      width: 480px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    & {
-      width: 768px;
-    }
-  }
   @media screen and (min-width: 1200px) {
     & {
-      width: 1200px;
+      padding-top: 94px;
+      padding-bottom: 94px;
     }
   }
 }
@@ -27,12 +13,6 @@
 %vertical-centered {
   display: flex;
   align-items: center;
-}
-
-%img {
-  display: block;
-  max-width: 100%;
-	height: auto;
 }
 
 %input {
@@ -61,7 +41,6 @@
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
-  
 }
 
 %subtitle {

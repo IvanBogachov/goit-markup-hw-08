@@ -13,7 +13,7 @@
   background-color: var(--accent-color);
   color: var(--primary-color);
   box-shadow: var(--box-shadow-btn);
-  transition: background-color var(--time-transl) var(--cubic-bezier);
+  transition: background-color 250ms var(--cubic-bezier);
 
   &:hover,
   &:focus {
@@ -24,8 +24,8 @@
 .main-button--footer {
   display: flex;
   align-items: center;
-  width: 200px;
-  padding: 0 29px;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .main-button__icon {

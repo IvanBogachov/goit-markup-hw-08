@@ -1,13 +1,18 @@
 .team-members {
   @extend %list;
 
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+  }
 }
 
 .team-members__card {
-  margin-right: 30px;
   margin-bottom: 30px;
+  padding-bottom: 24px;
 
   font-size: 16px;
   line-height: 1.19;
@@ -15,24 +20,27 @@
 
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  box-shadow: 
-  0px 1px 3px var(--box-shodow-first), 
-  0px 1px 1px var(--box-shodow-second),
-  0px 2px 1px var(--box-shodow-third);
+  box-shadow: 0px 1px 3px var(--box-shodow-first), 0px 1px 1px var(--box-shodow-second),
+    0px 2px 1px var(--box-shodow-third);
 
   background-color: var(--primary-color);
 
-  &:nth-child(4n) {
-  margin-right: 0;
-}
+  @media screen and (min-width: 768px) {
+    & {
+      width: calc((100% - 60px) / 2);
+      margin: 15px;
+    }
+  }
 
-&:nth-last-child(-n + 4) {
-  margin-bottom: 0;
-}
+  @media screen and (min-width: 1200px) {
+    & {
+      width: calc((100% - 120px) / 4);
+    }
+  }
 }
 
 .team-members__thumb {
-  @extend %img;
+  width: 100%;
   margin-bottom: 30px;
 }
 

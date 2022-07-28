@@ -8,12 +8,6 @@
 
   color: var(--primary-text-color);
   text-decoration: none;
-
-  @media screen and (min-width: 480px) {
-    & {
-      font-size: 24px;
-    }
-  }
 }
 
 .logo__accent {
@@ -23,10 +17,4 @@
 .logo--footer {
   margin-bottom: 20px;
   color: var(--primary-color);
-
-  @media screen and (min-width: 480px) {
-    & {
-      margin-bottom: 16px;
-    }
-  }
 }

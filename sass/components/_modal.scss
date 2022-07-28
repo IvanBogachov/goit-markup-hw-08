@@ -1,6 +1,7 @@
 .is-hidden {
   .modal {
     transform: translate(-50%, -50%) scale(0.9);
+    transform: scale(0.9);
   }
 }
 
@@ -9,44 +10,45 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--time-transl) var(--cubic-bezier);
-
-  width: 528px;
+  transition: transform 250ms var(--cubic-bezier);
   padding: 40px;
-
   border-radius: 4px;
   background-color: var(--primary-color);
+
+  @media screen and (min-width: 480px) {
+    & {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      width: 528px;
+    }
+  }
 }
 
 .modal__close-btn {
-  display: flex;
   position: absolute;
   top: 8px;
   right: 8px;
 
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
 
+  width: 30px;
   height: 30px;
-  margin: 0;
-  padding: 0;
-  min-width: 30px;
 
   border-radius: 50%;
-  background-color: inherit;
+  background-color: var(--primary-color);
   border: 1px solid var(--border-close-btn);
-
-  transition: border var(--time-transl) var(--cubic-bezier),
-  color var(--time-transl) var(--cubic-bezier);
-
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+  &:hover .modal__close-btn-icon {
+    fill: var(--accent-color);
   }
 }
 
@@ -54,6 +56,7 @@
   display: block;
   margin: auto;
   fill: currentColor;
+  transition: fill 250ms var(--cubic-bezier);
 }
 
 .modal__title {

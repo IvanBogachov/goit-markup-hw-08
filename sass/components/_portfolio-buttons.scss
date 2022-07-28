@@ -1,12 +1,24 @@
 .portfolio-buttons {
   @extend %list;
+
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: left;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
-.portfolio-buttons__item:not(:last-child) {
-  margin-right: 8px;
+.portfolio-buttons__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio-buttons__link {
@@ -21,23 +33,15 @@
   line-height: 1.62;
   cursor: pointer;
 
-  transition: 
-    background-color var(--time-transl) var(--cubic-bezier), 
-    color var(--time-transl) var(--cubic-bezier),
-    box-shadow var(--time-transl) var(--cubic-bezier);
+  background-color: var(--accent-bg-color);
 
   &:hover,
   &:focus {
     background-color: var(--accent-color);
     color: var(--primary-color);
-    box-shadow: 
-    0px 3px 1px var(--box-shodow-fifth), 
-    0px 1px 2px var(--box-shodow-fourth),
-    0px 2px 2px var(--box-shodow-first);
-    
-    transition: 
-    background-color var(--time-transl) var(--cubic-bezier), 
-    color var(--time-transl) var(--cubic-bezier),
-    box-shadow var(--time-transl) var(--cubic-bezier);
+    box-shadow: 0px 3px 1px var(--box-shodow-fifth), 0px 1px 2px var(--box-shodow-fourth),
+      0px 2px 2px var(--box-shodow-first);
+    transition: background-color 250ms var(--cubic-bezier), color 250ms var(--cubic-bezier),
+      box-shadow 250ms var(--cubic-bezier);
   }
 }
