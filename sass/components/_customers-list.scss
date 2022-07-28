@@ -40,19 +40,23 @@
   border: 1px solid var(--social-net-color);
   border-radius: 4px;
 
+  transition: border-color var(--time-transl) var(--cubic-bezier);
+
   &:hover,
   &:active {
     border-color: var(--accent-color);
-    transition: border-color 250ms var(--cubic-bezier);
+    transition: border-color var(--time-transl) var(--cubic-bezier);
   }
 
   &:hover .customers-list__icon,
   &:active .customers-list__icon {
     fill: var(--accent-color);
-    transition: fill 250ms var(--cubic-bezier);
+    transition: fill var(--time-transl) var(--cubic-bezier);
   }
 }
 
 .customers-list__icon {
   fill: var(--social-net-color);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+
 }

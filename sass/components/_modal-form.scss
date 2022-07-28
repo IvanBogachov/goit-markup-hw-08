@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
   margin-bottom: 10px;
 
   &:nth-child(4) {
@@ -19,16 +20,19 @@
 
 .modal-form__input {
   @extend %input;
+  height: 40px;
   padding: 11px 12px 11px 42px;
   border-radius: 4px;
   border: var(--border-input-modal);
   outline: none;
-  transition: border 250ms var(--cubic-bezier);
+  transition: border var(--time-transl) var(--cubic-bezier);
 
+  &:hover,
   &:focus-within {
     border: var(--border-input-focus);
   }
 
+  &:hover + .modal-form__icon,
   &:focus-within + .modal-form__icon {
     fill: var(--accent-color);
   }
@@ -37,8 +41,13 @@
 .modal-form__icon {
   position: absolute;
   left: 12px;
-  bottom: 11px;
-  transition: fill 250ms var(--cubic-bezier);
+  top: 50%;
+  transform: translateY(0);
+  width: 18px;
+  height: 18px;
+  fill: var(--secondary-text-color);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+
 }
 
 .modal-form__input--textarea {
@@ -100,7 +109,7 @@
   position: absolute;
   left: 0;
   opacity: 0;
-  transition: opacity 250ms var(--cubic-bezier);
+  transition: opacity var(--time-transl) var(--cubic-bezier);
 }
 
 .checkbox__icon {

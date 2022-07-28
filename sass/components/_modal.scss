@@ -10,7 +10,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--cubic-bezier);
+  transition: transform var(--time-transl) var(--cubic-bezier);
   padding: 40px;
   border-radius: 4px;
   background-color: var(--primary-color);
@@ -47,8 +47,14 @@
   border: 1px solid var(--border-close-btn);
   cursor: pointer;
 
-  &:hover .modal__close-btn-icon {
-    fill: var(--accent-color);
+  transition: border var(--time-transl) var(--cubic-bezier),
+  color var(--time-transl) var(--cubic-bezier);
+
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
   }
 }
 
