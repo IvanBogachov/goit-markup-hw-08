@@ -1,7 +1,7 @@
 .nav {
   @extend %vertical-centered;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     & {
       justify-content: space-between;
     }
@@ -49,10 +49,12 @@
   display: block;
   line-height: 1.15;
 
+  transition: color var(--time-transl) var(--cubic-bezier);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
-    transition: color 250ms var(--cubic-bezier);
+    
   }
 
   @media screen and (min-width: 768px) {

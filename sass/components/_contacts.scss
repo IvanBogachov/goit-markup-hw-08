@@ -38,62 +38,62 @@
       display: flex;
     }
   }
-}
 
-.contacts__item {
-  @media screen and (max-width: 767px) {
-    &:nth-child(2) {
-      font-size: 34px;
-      margin-bottom: 38px;
-    }
+  &__item {
+    @media screen and (max-width: 767px) {
+      &:nth-child(2) {
+        font-size: 34px;
+        margin-bottom: 38px;
+      }
 
-    &:nth-child(1) {
-      font-size: 26px;
-    }
-  }
-
-  &:not(:last-child) {
-    @media screen and (max-width: 1199px) {
-      & {
-        margin-bottom: 10px;
+      &:nth-child(1) {
+        font-size: 26px;
       }
     }
 
-    @media screen and (min-width: 1200px) {
-      & {
-        margin-right: 50px;
+    &:not(:last-child) {
+      @media screen and (max-width: 1199px) {
+        & {
+          margin-bottom: 10px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        & {
+          margin-right: 32px;
+        }
       }
     }
   }
-}
 
-.contacts__link {
-  @extend %vertical-centered;
-  @extend %link;
+  &__link {
+    @extend %vertical-centered;
+    @extend %link;
 
-  color: var(--secondary-text-color);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+    color: var(--secondary-text-color);
     transition: color var(--time-transl) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
-}
 
-.contacts__link--accent {
-  @media screen and (max-width: 767px) {
-    color: var(--accent-color);
+  &__link--accent {
+    @media screen and (max-width: 767px) {
+      color: var(--accent-color);
+    }
   }
-}
 
-.contacts__icon {
-  display: none;
-  fill: currentColor;
-  margin-right: 10px;
+  &__icon {
+    display: none;
+    fill: currentColor;
+    margin-right: 10px;
 
-  @media screen and (min-width: 767px) {
-    & {
-      display: block;
+    @media screen and (min-width: 768px) {
+      & {
+        display: block;
+      }
     }
   }
 }

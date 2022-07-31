@@ -15,7 +15,7 @@
       bottom: 0;
 
       transform: translateX(100%);
-      transition: transform 250ms var(--cubic-bezier);
+      transition: transform var(--time-transl) var(--cubic-bezier);
     }
   }
 
@@ -38,6 +38,14 @@
     & {
       position: relative;
       align-items: left;
+
+      width: 100%;
+      flex-direction: column;
+      padding: 48px 40px;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
     }
   }
 
@@ -48,17 +56,17 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
-    & {
-      width: 100%;
-      flex-direction: column;
-      padding: 48px 40px;
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 1.17;
-      letter-spacing: 0.02em;
-    }
-  }
+  // @media screen and (max-width: 767px) {
+  //   & {
+  //     width: 100%;
+  //     flex-direction: column;
+  //     padding: 48px 40px;
+  //     font-weight: 500;
+  //     font-size: 40px;
+  //     line-height: 1.17;
+  //     letter-spacing: 0.02em;
+  //   }
+  // }
 }
 
 .menu-backdrop__button {
@@ -68,13 +76,6 @@
   border: none;
   background-color: transparent;
 
-  @media screen and (min-width: 768px) {
-    & {
-      display: none;
-    }
-  }
-}
-.menu-backdrop__icon-menu {
   fill: var(--primary-text-color);
   transition: fill var(--time-transl) var(--cubic-bezier);
   cursor: pointer;
@@ -83,12 +84,28 @@
   &:focus {
     fill: var(--accent-color);
   }
+
+  @media screen and (min-width: 768px) {
+    & {
+      display: none;
+    }
+  }
 }
+
 .menu-backdrop__button--cross {
   position: absolute;
   top: 10px;
   right: 15px;
-  
+
+  fill: var(--primary-text-color);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
   @media screen and (min-width: 768px) {
     & {
       display: none;
@@ -98,15 +115,6 @@
 
 .menu-backdrop__icon-cross {
   display: none;
-
-  fill: var(--primary-text-color);
-  transition: fill var(--time-transl) var(--cubic-bezier);
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
 }
 
 .is-open {
