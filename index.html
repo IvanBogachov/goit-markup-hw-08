@@ -25,7 +25,6 @@
             type="button"
             class="menu-backdrop__button"
             aria-expanded="false"
-            aria-controls="menu-backdrop__container"
             data-menu-button
           >
             <svg
@@ -34,7 +33,8 @@
               height="40"
               aria-label="Переключатель мобильного меню"
             >
-              <use class="menu-backdrop__icon-menu" href="./images/icons.svg#sandwich-btn"></use>
+            <!-- <use class="menu-backdrop__icon-cross" href="./images/icons.svg#close-menu-btn"></use> -->
+            <use class="menu-backdrop__icon-menu" href="./images/icons.svg#sandwich-btn"></use>
             </svg>
           </button>
           <div class="menu-backdrop" id="nav__menu-container" data-menu>
@@ -43,7 +43,6 @@
                 type="button"
                 class="menu-backdrop__button menu-backdrop__button--cross"
                 aria-expanded="false"
-                aria-controls="menu-backdrop__container"
                 data-menu-button-close
               >
                 <svg
@@ -52,10 +51,7 @@
                   height="40"
                   aria-label="Переключатель мобильного меню"
                 >
-                  <use
-                    class="menu-backdrop__icon-cross"
-                    href="./images/icons.svg#close-menu-btn"
-                  ></use>
+                  <use class="menu-backdrop__icon-cross" href="./images/icons.svg#close-menu-btn"></use>
                 </svg>
               </button>
               <nav class="nav">
@@ -70,7 +66,6 @@
                 </ul>
               </nav>
               <ul class="contacts">
-                
                   <li class="contacts__item">
                     <a class="contacts__link contacts__link--accent" href="tel:+380961111111">
                       <svg class="contacts__icon" width="10" height="16">
@@ -87,7 +82,6 @@
                       info@devstudio.com
                     </a>
                   </li>
-
               </ul>
               <ul class="social-links">
                 <li class="social-links__item">
@@ -552,7 +546,6 @@
             <div class="modal-form__field">
               <label for="comment" class="modal-form__label">Комментарий</label>
               <textarea
-                type="text"
                 class="modal-form__input modal-form__input--textarea"
                 id="comment"
                 placeholder="Введите текст">
@@ -561,7 +554,7 @@
             <div class="checkbox">
               <label class="checkbox__label">
                 <input type="checkbox" class="checkbox__input" required />Соглашаюсь с рассылкой и
-                принимаю&nbsp
+                принимаю&nbsp;
                 <a href="#" class="checkbox__link">Условия договора</a>
                 <span class="checkbox--no-checked"></span>
                 <span class="checkbox--checked">

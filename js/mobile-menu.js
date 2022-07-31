@@ -10,5 +10,6 @@
 
   function toggleModal() {
     refs.menu.classList.toggle('is-open');
+    refs.openMenuBtn.classList.toggle('is-open');
   }
 })();

@@ -165,6 +165,59 @@ body {
           justify-content: space-between;
 }
 
+.menu-backdrop__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  fill: var(--primary-text-color);
+  -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+  cursor: pointer;
+}
+.menu-backdrop__button:hover, .menu-backdrop__button:focus {
+  fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-backdrop__button {
+    display: none;
+  }
+}
+
+.menu-backdrop__button--cross {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  fill: var(--primary-text-color);
+  -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
+  transition: fill var(--time-transl) var(--cubic-bezier);
+  cursor: pointer;
+}
+.menu-backdrop__button--cross:hover, .menu-backdrop__button--cross:focus {
+  fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-backdrop__button--cross {
+    display: none;
+  }
+}
+
+.menu-backdrop__icon-cross {
+  display: none;
+}
+
+.is-open .menu-backdrop__icon-cross {
+  display: block;
+}
+.is-open .menu-backdrop__icon-menu {
+  display: none;
+}
+
 .menu-backdrop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,60 +288,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.menu-backdrop__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 10px;
-  right: 15px;
-  border: none;
-  background-color: transparent;
-  fill: var(--primary-text-color);
-  -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
-  transition: fill var(--time-transl) var(--cubic-bezier);
-  cursor: pointer;
-}
-.menu-backdrop__button:hover, .menu-backdrop__button:focus {
-  fill: var(--accent-color);
-}
-@media screen and (min-width: 768px) {
-  .menu-backdrop__button {
-    display: none;
-  }
-}
-
-.menu-backdrop__button--cross {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  fill: var(--primary-text-color);
-  -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
-  transition: fill var(--time-transl) var(--cubic-bezier);
-  cursor: pointer;
-}
-.menu-backdrop__button--cross:hover, .menu-backdrop__button--cross:focus {
-  fill: var(--accent-color);
-}
-@media screen and (min-width: 768px) {
-  .menu-backdrop__button--cross {
-    display: none;
-  }
-}
-
-.menu-backdrop__icon-cross {
-  display: none;
-}
-
-.is-open .menu-backdrop__icon-cross {
-  display: block;
-}
-.is-open .menu-backdrop__icon-menu {
-  display: none;
 }
 
 .social-links {
@@ -1210,6 +1209,7 @@ body {
   opacity: 1;
   -webkit-transition: opacity var(--time-transl) var(--cubic-bezier);
   transition: opacity var(--time-transl) var(--cubic-bezier);
+  overflow-y: scroll;
 }
 @media screen and (max-width: 1199px) {
   .backdrop {
