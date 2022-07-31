@@ -684,7 +684,7 @@ body {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: auto;
-    margin-bottom: 58px;
+    margin-bottom: 64px;
     font-weight: 500;
     font-size: 26px;
     line-height: 1.17;
@@ -713,11 +713,13 @@ body {
 }
 @media screen and (max-width: 767px) {
   .contacts__item:nth-child(2) {
-    font-size: 34px;
+    font-size: 26px;
+    line-height: 1.16;
     margin-bottom: 38px;
   }
   .contacts__item:nth-child(1) {
-    font-size: 26px;
+    font-size: 34px;
+    line-height: 1.17;
   }
 }
 .contacts__item:not(:last-child) {
