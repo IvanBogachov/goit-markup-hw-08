@@ -238,11 +238,14 @@ body {
 }
 
 .menu-backdrop__button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
   margin: 0;
   padding: 0;
+  top: 10px;
+  right: 15px;
   border: none;
   background-color: transparent;
   fill: var(--primary-text-color);
@@ -549,8 +552,8 @@ body {
   color: var(--primary-color);
   -webkit-box-shadow: var(--box-shadow-btn);
           box-shadow: var(--box-shadow-btn);
-  -webkit-transition: background-color 250ms var(--cubic-bezier);
-  transition: background-color 250ms var(--cubic-bezier);
+  -webkit-transition: background-color var(--time-transl) var(--cubic-bezier);
+  transition: background-color var(--time-transl) var(--cubic-bezier);
 }
 .main-button:hover, .main-button:focus {
   background-color: var(--button-hover);
@@ -717,13 +720,17 @@ body {
     font-size: 26px;
   }
 }
-@media screen and (max-width: 1199px) {
+.contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 32px;
   }
 }
@@ -1199,8 +1206,8 @@ body {
   height: 100%;
   background-color: var(--modal-opacity-bg);
   opacity: 1;
-  -webkit-transition: opacity 250ms var(--cubic-bezier);
-  transition: opacity 250ms var(--cubic-bezier);
+  -webkit-transition: opacity var(--time-transl) var(--cubic-bezier);
+  transition: opacity var(--time-transl) var(--cubic-bezier);
 }
 @media screen and (max-width: 1199px) {
   .backdrop {
@@ -1278,8 +1285,8 @@ body {
   display: block;
   margin: auto;
   fill: currentColor;
-  -webkit-transition: fill 250ms var(--cubic-bezier);
-  transition: fill 250ms var(--cubic-bezier);
+  -webkit-transition: fill var(--time-transl) var(--cubic-bezier);
+  transition: fill var(--time-transl) var(--cubic-bezier);
 }
 
 .modal__title {

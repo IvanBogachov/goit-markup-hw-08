@@ -70,9 +70,12 @@
 }
 
 .menu-backdrop__button {
-  display: inline-flex;
+  display: flex;
+  position: absolute;
   margin: 0;
   padding: 0;
+  top: 10px;
+  right: 15px;
   border: none;
   background-color: transparent;
 
@@ -91,6 +94,7 @@
     }
   }
 }
+
 
 .menu-backdrop__button--cross {
   position: absolute;

@@ -47,7 +47,8 @@
   border: 1px solid var(--border-close-btn);
   cursor: pointer;
 
-  transition: border var(--time-transl) var(--cubic-bezier),
+  transition: 
+  border var(--time-transl) var(--cubic-bezier),
   color var(--time-transl) var(--cubic-bezier);
 
 
@@ -62,7 +63,7 @@
   display: block;
   margin: auto;
   fill: currentColor;
-  transition: fill 250ms var(--cubic-bezier);
+  transition: fill var(--time-transl) var(--cubic-bezier);
 }
 
 .modal__title {

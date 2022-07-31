@@ -13,7 +13,7 @@
   background-color: var(--accent-color);
   color: var(--primary-color);
   box-shadow: var(--box-shadow-btn);
-  transition: background-color 250ms var(--cubic-bezier);
+  transition: background-color var(--time-transl) var(--cubic-bezier);
 
   &:hover,
   &:focus {
