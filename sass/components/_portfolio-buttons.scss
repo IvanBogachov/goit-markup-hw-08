@@ -15,14 +15,19 @@
   }
 
   &__item {
+    margin-bottom: 0;
+
   &:not(:last-child) {
     margin-right: 8px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
     &:not(:nth-last-child(-n + 2)) {
         margin-bottom: 15px;
       }
   }
+  // @media screen and (min-width: 1200px) {
+  //   margin-bottom: 0;
+  // }
   // &:not(:nth-last-child(-n + 2)) {
   //   margin-bottom: 15px;
   // }
