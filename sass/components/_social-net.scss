@@ -21,13 +21,13 @@
     transition: background-color var(--time-transl) var(--cubic-bezier);
 
     &:hover,
-    &:active {
+    &:focus {
       background-color: var(--accent-color);
     }
   }
 
   &__link:hover &__icon,
-  &__link:active &__icon {
+  &__link:focus &__icon {
     fill: var(--primary-color);
   }
 
