@@ -36,7 +36,11 @@
         width: calc((100% - 60px) / 2);
         margin: 15px;
 
-        margin-bottom: 30px;
+        &:nth-child(n + 3) {
+          margin-top: 0;
+            margin-bottom: 0px;
+          }
+        // margin-bottom: 0;
       }
     }
 
